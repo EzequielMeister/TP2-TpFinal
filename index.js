@@ -14,6 +14,7 @@ const app = express();
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(morgan("tiny"))
+
 // midlewares
 function logger(req, res, next) {
      console.log(`🚀 ~ logger ~ req:`, req.url);
