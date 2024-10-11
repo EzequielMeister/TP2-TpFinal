@@ -10,12 +10,12 @@ import morgan from "morgan"
 const app = express();
 
 // ---------------
-// fundamentales
+// middlewares fundamentales
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(morgan("tiny"))
 
-// midlewares
+// middlewares
 function logger(req, res, next) {
      console.log(`🚀 ~ logger ~ req:`, req.url);
      next();
